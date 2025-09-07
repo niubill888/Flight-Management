@@ -1,0 +1,13 @@
+p=head;
+q=p->next;
+
+while(q)
+{
+    q->next=p;
+    p->prev=q;
+    p=q;
+    q=p->next;
+}
+
+p->prev=head;
+head->next=p;
